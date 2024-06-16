@@ -1,0 +1,19 @@
+.student{
+    float: left;
+    border: 3px solid rgb(88, 47, 113);;
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(198, 184, 207);;
+}
+
+.student header{
+    background-color: rgb(88, 47, 113);;
+    color: white;
+    padding: 15px;
+}
+
+button{
+    background-color: red;
+    color: white;
+    margin-bottom: 10px;
+}

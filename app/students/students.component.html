@@ -1,0 +1,37 @@
+
+<h1>Studentenspel</h1>
+
+@if((student$ | async)?.length == 1) {
+    <h2>Er is {{ (student$ | async)?.length }} studenten.</h2>
+
+} @else {
+    <h2>Er zijn {{(student$ | async)?.length }} studenten.</h2>
+
+}
+
+<!-- <h2 *ngIf="names.length == 1">Er is {{ names.length }} studenten.</h2>
+<h2 *ngIf="names.length != 1">Er zijn {{ names.length }} studenten.</h2> -->
+
+<p>
+    Totaal punten: {{ total$ | async }}
+</p>
+
+<input #nameInput type="text" [(ngModel)]="newName" />
+
+<button [disabled]="validation()" (click)="addName()">toevoegen</button>
+<button [disabled]="(student$ | async)?.length == 0" (click)="removeName()">(laatste) student verwijderen</button>
+
+<br />
+
+@for(name of (student$ | async); track name){
+    <app-student-details [Student]="name"></app-student-details>
+}
+
+<!-- <app-student-details></app-student-details> -->
+
+<!-- <ul>
+    @for(student of names; track name) {
+        <li>{{ student.name }}</li>
+    }
+    <li *ngFor="let name of names">{{ name }}</li>
+</ul>-->

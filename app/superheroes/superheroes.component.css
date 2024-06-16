@@ -1,0 +1,14 @@
+.superhero {
+    float: left;
+    border: 3px solid rgb(88, 47, 113);
+    background-color: rgb(198, 184, 207);
+    /* width: 200px; */
+    text-align: center;
+    margin: 20px;
+}
+
+header {
+    background-color: rgb(88, 47, 113);
+    color: white;
+    padding: 10px;
+}

@@ -1,0 +1,26 @@
+<h2 *ngIf="!Station">Kies een station</h2>
+    
+<h2 *ngIf="Station">{{ Station.Name }}</h2>
+
+<table>
+    <tr>
+        <th align="left">Treinsoort</th>
+        <th align="left">Tijd</th>
+        <th align="left">EindBestemming</th>
+        <th align="left">Spoor</th>
+        <th align="left">Route</th>
+        <th align="left">Vertraging</th>
+        <th align="left">RitNummer</th>
+    </tr>
+    @for(trein of info; track trein){
+    <tr [class]="{delayed: trein.VertrekVertragingTekst}">
+        <td>{{ trein.TreinSoort }}</td>
+        <td>{{ trein.VertrekTijd.substring(11, 16) }}</td>
+        <td>{{ trein.EindBestemming }}</td>
+        <td>{{ trein.VertrekSpoor }}</td>
+        <td>{{ trein.RouteTekst }}</td>
+        <td>{{ trein.VertrekVertragingTekst }}</td>
+        <td>{{ trein.RitNummer }}</td>
+    </tr>
+    }
+</table>

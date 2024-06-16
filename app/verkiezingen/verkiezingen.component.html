@@ -1,0 +1,19 @@
+<h2>Er zijn {{ partijen.length }} partijen en in totaal {{ total }} zetels.</h2>
+
+@for(partij of partijen; track partij){
+    <div (click)="partij.Selected = !partij.Selected" [class]="{ selected : partij.Selected }" class="partij">{{partij.Naam}}</div>
+}
+<br style="clear: both" />
+
+<p>Er zijn nu {{ totalCoalition }} zetels geselecteerd</p>
+<h1 *ngIf="isMeerderheid">U heeft succesvol een coalitie gevormd.</h1>
+<p *ngIf="!isMeerderheid">Dit is geen meerderheid.</p>
+
+<p>{{ coalitionNames }}</p>
+
+<svg height="20" [attr.width]="totalCoalition*2">
+    <rect x="0" y="0" [attr.width]="total*2" height="20px" fill="lightgrey"></rect>
+    <rect x="0" y="0" [attr.width]="totalCoalition*2" height="20px" [attr.fill]="kleur"></rect>
+</svg>
+
+<p> Lunch:</p>

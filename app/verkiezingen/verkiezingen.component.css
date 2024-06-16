@@ -1,0 +1,16 @@
+.partij {
+    float: left;
+    border: solid 2px purple;
+    border-color: lightpurple;
+    margin: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.partij.selected{
+    background-color: purple;
+    color: white;
+}

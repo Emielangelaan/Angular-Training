@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+body
+{
+    font-family: monospace;
+    font-size: 1em;
+    margin: 0;
+}
+
+th{
+    background-color: rgb(88, 47, 113);
+    color: rgb(198, 184, 207);
+    border: rgb(88, 47, 113);
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:hover{
+    background-color: rgb(88, 47, 113);
+    color: rgb(198, 184, 207);
+}
+table{
+    width: 80%;
+}

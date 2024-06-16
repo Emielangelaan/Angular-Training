@@ -1,0 +1,44 @@
+<h1>Superhelden</h1>
+
+<h2>Er zijn {{ filteredHeroes.length }} superhelden.</h2>
+
+<input type="text" [(ngModel)]="searchText" />
+
+<select [(ngModel)]="size">
+    <option value="xs">Extra small</option>
+    <option value="sm">Small</option>
+    <option value="md">Medium</option>
+    <option value="lg">Large</option>
+</select>
+
+<input type="radio" name="gender" value="Male" [(ngModel)]="gender" /> Man
+<input type="radio" name="gender" value="Female" [(ngModel)]="gender" /> Vrouw
+<input type="radio" name="gender" value="-" [(ngModel)]="gender" /> Nonbinair
+<input type="radio" name="gender" value="" [(ngModel)]="gender" /> Alles
+
+<button (click)="sortByIntelligence()">Sorteer op intelligentie</button>
+<button (click)="sortByName()">Sorteer op naam</button>
+
+<br />
+
+<div class="superhero" *ngFor="let h of filteredHeroes">
+    <header>{{ h.name }}</header>
+    <br>
+    <img *ngIf="size == 'xs'" [src]="h.images.xs" />
+    <img *ngIf="size == 'sm'" [src]="h.images.sm" />
+    <img *ngIf="size == 'md'" [src]="h.images.md" />
+    <img *ngIf="size == 'lg'" [src]="h.images.lg" />
+    <p>
+        {{ h.appearance.gender }}
+    </p>
+    <p>
+        Intelligence = {{ h.powerstats.intelligence }}
+    </p>
+    <p>
+        Strength = {{ h.powerstats.strength }}
+    </p>
+    <p>
+        Speed = {{ h.powerstats.speed }}
+    </p>
+
+</div>

@@ -1,0 +1,20 @@
+<h2>Stad {{ id }}</h2>
+<label>StadsId</label><br />
+<input type="text" [(ngModel)]="city.CityID" /><br />
+<label>Stadsnaam</label><br />
+<input type="text" [(ngModel)]="city.CityName" /><br />
+<label>Land</label><br />
+<input type="text" [(ngModel)]="city.Country" /><br />
+<label>Populatie</label><br />
+<input type="text" [(ngModel)]="city.Population" /><br />
+<label>Jaar</label><br />
+<input type="text" [(ngModel)]="city.Year" /><br />
+<label>Image-URL</label><br />
+<input type="text" [(ngModel)]="city.ImageUrl" /><br />
+<button [routerLink]="['photo']">Bekijk foto</button>
+<br />
+<br />
+<br />
+<button (click)="goBack()">Terug naar overzicht</button> <button (click)="saveCity()">Opslaan</button> <button (click)="deleteCity()">Verwijderen</button>
+
+<p>{{ errorMessage }}</p>

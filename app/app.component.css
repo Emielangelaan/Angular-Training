@@ -1,0 +1,50 @@
+nav
+{
+    float: left;
+    width: 200px;
+    background-color: rgb(198, 184, 207);
+    height: 100vh;
+}
+nav a
+{
+    border-radius: 10px;
+    background-color: rgb(198, 184, 207);
+    display: block;
+    padding: 10px;
+    text-align: center;
+    margin: 15px;
+    color: #1a1a1a;
+    position: relative;
+    text-decoration: none;
+    opacity: 1;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+nav a:hover{
+    background-color: white;
+}
+h1
+{
+    font-weight: normal;
+    font-size: 1.5em;
+    margin: .67em;
+}
+hr
+{
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin: 20px;
+    color: rgb(227, 220, 231);
+}
+main
+{
+    float: right;
+    width: 77%;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}

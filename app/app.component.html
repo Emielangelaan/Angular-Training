@@ -1,0 +1,19 @@
+<nav>
+  <a routerLink="">Home</a>
+  <hr>
+  <a routerLink="students">Studenten</a>
+  <hr>
+  <a routerLink="superheroes">Superhelden</a>
+  <hr>
+  <a routerLink="cities">Cities</a>
+  <hr>
+  <a routerLink="nsreisinfo">NS Reisinfo</a>
+  <hr>
+  <a routerLink="verkiezingen">Verkiezingen</a>
+  <hr>
+  <p (click)="jarig()">{{ age$ | async }}</p>
+</nav>
+
+<main>
+  <router-outlet />
+</main>

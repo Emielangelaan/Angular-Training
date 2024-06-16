@@ -1,0 +1,13 @@
+<h1>NS Reisinformatie</h1>
+
+<div class="links">
+    <input type="checkbox" [(ngModel)]="showMap" /> Toon de kaart
+    <br />
+    <br />
+    <app-stationskaart [hidden]="showMap" (StationClicked)="onStationClicked($event)"></app-stationskaart>
+    <app-stationslijst [hidden]="!showMap" (StationClicked)="onStationClicked($event)"></app-stationslijst>
+</div>
+
+<div class="rechts">
+    <app-vertrektijden [Station]="currentStation"></app-vertrektijden>
+</div>

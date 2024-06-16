@@ -1,0 +1,7 @@
+<h2> {{ stations.length }} stations</h2>
+
+<select size="20">
+    @for(station of stations; track station){
+    <option (click)="stationClick(station)"> {{station.Name}}</option>
+    }
+</select>

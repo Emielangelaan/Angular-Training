@@ -1,0 +1,27 @@
+<h1>Stedenlijst</h1>
+
+@if(cities.length == 1) {
+    <h2>There is 1 city</h2>
+} @else {
+    <h2>There are {{ cities.length }} cities</h2>
+}
+<table>
+    <tr>
+        <th align="left" (click) = "sortById()">ID</th>
+        <th align="left" (click) = "sortByName()">Name</th>
+        <th align="left" (click) = "sortByCountry()">Country</th>
+        <th align="left" (click) = "sortByPopulation()">Population</th>
+        <th align="left" (click) = "sortByYear()">Year</th>
+        <th ><button [routerLink]="[0]" class="buttonNew">Nieuwe Stad</button></th>
+    </tr>
+    @for(city of cities; track city){
+    <tr>
+        <td [routerLink]="[city.CityID]">{{ city.CityID }}</td>
+        <td [routerLink]="[city.CityID]">{{ city.CityName }}</td>
+        <td [routerLink]="[city.CityID]">{{ city.Country }}</td>
+        <td [routerLink]="[city.CityID]">{{ city.Population }}</td>
+        <td [routerLink]="[city.CityID]">{{ city.Year }}</td>
+        <td align="center"><button class="buttonDelete" (click)="deleteCity(city.CityID)">X</button></td>
+    </tr>
+    }
+</table>

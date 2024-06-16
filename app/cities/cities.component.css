@@ -1,0 +1,10 @@
+.buttonNew{
+    background-color: rgb(20, 168, 20);;
+    border-color: rgb(20, 168, 20);
+}
+button{
+    background-color: red;
+    color: white;
+    border-color: red;
+    border-radius: 10px;
+}
